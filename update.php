@@ -69,7 +69,7 @@ try {
     $stmt3->execute();
     $stmt4->execute();
 
-    echo '<div style="text-align: center">Radonnée modifiée avec succès !</div>';
+    echo '<div style="text-align: center">Randonnée modifiée avec succès !</div>';
 }
 
 catch (PDOException $exception) {

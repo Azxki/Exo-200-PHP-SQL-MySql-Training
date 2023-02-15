@@ -14,12 +14,17 @@ try {
 
     $stmt = $db->prepare('SELECT * from hiking');
     $state = $stmt->execute();
-    $i = 1;
+    $i2 = 1;
 
     if ($state) {
         foreach ($stmt->fetchAll() as $rando) {
-            echo "Randonnées " . $i . " : " . $rando['name'] . "  <a href='update.php'>Modifier</a>" . '<br>';
-            $i++;
+            echo "Randonnées " . $i2 . " : " . $rando['name'] . "  <a href='update.php'>Modifier</a>
+            <form method='post' action='delete.php'>
+            <label id='$i2'>
+            <input type='submit' value='Supprimer' id='$i2' name='$i2'>
+            </label>
+            </form>" . '<br>';
+            $i2++;
         }
     } else {
         echo "requête invalide !";
